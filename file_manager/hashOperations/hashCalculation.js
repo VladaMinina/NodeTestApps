@@ -2,16 +2,16 @@ import { createHash } from 'crypto';
 import { createReadStream } from 'fs';
 
 export const calculateHash = async (filePath) => {
-    const hash = createHash('sha256'); 
+    const hash = createHash('sha256');
     const stream = createReadStream(filePath);
 
     stream.on('data', (data) => {
-        hash.update(data); 
+        hash.update(data);
     });
 
     return new Promise((resolve, reject) => {
         stream.on('end', () => {
-            const result = hash.digest('hex'); 
+            const result = hash.digest('hex');
             resolve(result);
         });
 
@@ -20,7 +20,7 @@ export const calculateHash = async (filePath) => {
         });
 
         stream.on('error', (err) => {
-            reject(err); 
+            reject(err);
         });
     });
 };

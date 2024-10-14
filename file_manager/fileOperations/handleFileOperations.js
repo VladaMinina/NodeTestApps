@@ -116,7 +116,7 @@ export const handleFileOperations = async (currentDir, operation, args) => {
                         process.stdout.write(data);
                     });
                     readStream.on("error", (error) => {
-                        reject(error); 
+                        reject(error);
                     });
                     readStream.on("end", () => {
                         console.log("\nAll the data in the file has been read");
@@ -209,7 +209,7 @@ export const handleFileOperations = async (currentDir, operation, args) => {
             const fileToRemove = resolvePath(currentDir, args[0]);
             try {
                 await fs.access(fileToRemove);
-                await fs.unlink(fileToRemove); 
+                await fs.unlink(fileToRemove);
                 console.log(`File deleted: ${fileToRemove}`);
             } catch (error) {
                 if (error.code === 'ENOENT') {
