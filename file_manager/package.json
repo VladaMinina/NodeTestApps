@@ -1,0 +1,11 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "main": "fileManajer.js",
+  "scripts": {
+    "start": "node fileManager.js"
+  },
+  "author": "Vlada",
+  "license": "ISC",
+  "description": "It is file manager"
+}

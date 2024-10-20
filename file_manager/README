@@ -1,0 +1,3 @@
+Start App through command line:
+node fileManager.js --username={place your username here}
+
