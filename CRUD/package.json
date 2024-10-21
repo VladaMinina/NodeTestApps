@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start:multi": "node ./src/cluster.js",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
     "start": "node index.js",
     "start:dev": "nodemon index.js",
