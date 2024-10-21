@@ -3,14 +3,15 @@ import { v4 as uid } from 'uuid';
 const mapUsers = new Map();
 
 class User{
-    constructor(username, age, hobbies = []) {
-        if(!username || !age || !Array.isArray(hobbies)) {
+    constructor(id, name, age, hobbies = []) {
+        if(!id || !name || !age || !Array.isArray(hobbies)) {
             throw new Error('Username and age are required!');
         }
-        this.id = uid();
-        this.username = username;
+        this.id = id;
+        this.username = name;
         this.age = age;
         this.hobbies = hobbies;
+        console.log(this.id, this.hobbies, this.username, this.age);
     }
 }
 
