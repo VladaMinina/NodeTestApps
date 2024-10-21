@@ -1,8 +1,6 @@
 import http from 'node:http';
 import dotenv from 'dotenv';
 import { router } from './routes/routers.js';
-import cluster from 'cluster';
-import os from 'os';
 
 dotenv.config({ path: './.env' });
 
