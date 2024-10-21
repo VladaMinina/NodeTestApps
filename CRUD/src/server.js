@@ -1,4 +1,4 @@
-import http from 'node:http';
+import http from 'http';
 import dotenv from 'dotenv';
 import { router } from './routes/routers.js';
 
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 const server = http.createServer((req, res) => {
     try {
         router(req, res);
-    } catch {
+    } catch(error) {
         res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'Internal Server Error', error: error.message }));
     }
@@ -22,3 +22,5 @@ server.on('error', (err) => {
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+export { server };

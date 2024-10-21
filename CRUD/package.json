@@ -5,9 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
     "start": "node index.js",
     "start:dev": "nodemon index.js",
-    "start:prod": "npm runv build && node dist/index.js"
+    "build": "webpack",
+    "start:prod": "npm run build && node dist/bundle.js"
   },
   "author": "Vlada Minina",
   "license": "ISC",
@@ -15,5 +17,11 @@
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.7",
     "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   }
 }
