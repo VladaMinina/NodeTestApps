@@ -1,0 +1,19 @@
+{
+  "name": "simple_crud",
+  "version": "1.0.0",
+  "description": "Task simple CRUD operations",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "start:prod": "npm runv build && node dist/index.js"
+  },
+  "author": "Vlada Minina",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.7",
+    "uuid": "^10.0.0"
+  }
+}
