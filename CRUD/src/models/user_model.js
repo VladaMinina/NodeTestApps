@@ -1,5 +1,3 @@
-import { v4 as uid } from 'uuid';
-
 const mapUsers = new Map();
 
 class User{
